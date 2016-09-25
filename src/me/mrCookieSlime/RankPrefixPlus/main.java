@@ -29,7 +29,7 @@ public class main extends JavaPlugin {
 	public static Economy economy = null;
 	public static Chat chat = null;
 	
-	@Override
+	
 	public void onEnable() {
 		CSCoreLibLoader loader = new CSCoreLibLoader(this);
 		if (loader.load()) {
@@ -53,7 +53,7 @@ public class main extends JavaPlugin {
 			
 			getServer().getScheduler().runTaskTimer(this, new Runnable() {
 				
-				@Override
+				
 				public void run() {
 					for (Player p: Bukkit.getOnlinePlayers()) {
 						updateScoreboard(p);
@@ -100,7 +100,7 @@ public class main extends JavaPlugin {
 		cfg.save();
 	}
 
-	@Override
+	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (sender instanceof ConsoleCommandSender || sender.hasPermission("RankPrefixPlus.reload")) {
 			reloadSettings();
